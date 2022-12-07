@@ -1,0 +1,83 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light-cyan);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-blue);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  position: relative;
+  background: var(--dark-grayish-blue);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+
+header {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advice {
+  font-size: 28px;
+  max-width: 33.3vw;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+button {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  background: var(--neon-green);
+  color: var(--dark-blue);
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  margin-left: -2rem;
+}
+
+button:hover {
+  box-shadow: 0px 0px 30px 0px var(--neon-green);
+}
+
+.die {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .advice {
+    font-size: 20px;
+    max-width: 100%;
+  }
+}
